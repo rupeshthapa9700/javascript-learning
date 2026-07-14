@@ -115,3 +115,22 @@ function coinFlip(){
 }
 console.log(coinFlip());
 
+let username = "Rupesh";
+
+function test(){
+  let age = 22;
+}
+console.log(username);
+// console.log(age); This one will fail because age is not a global variable it is a scope variable 
+
+function add(a, b){
+  return a + b
+}
+console.log(add(1, 2));
+
+//Conversion into arrow function
+const add2 = (a, b) => {
+  return a + b;
+}
+console.log(add2(1, 2));
+
