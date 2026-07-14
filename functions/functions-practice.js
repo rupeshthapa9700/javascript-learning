@@ -81,3 +81,37 @@ function countWords(words){
   
 }
 console.log(countWords("JavaScript is fun"));
+
+function canDrive(age, hasLicense){
+  return age >= 18 && hasLicense;
+}
+
+console.log(canDrive(20,true));
+
+function checkPassword(password){
+  if(password.length >= 12){
+    return "Strong password.";
+  } else if(password.length >= 8 ){
+    return "Medium password.";
+  } else{
+    return "Weak password";
+  }
+}
+console.log(checkPassword("javascript123"));
+
+function randomNumber(min, max){
+  let random = Math.floor(Math.random() * (max - min + 1)) + min ;
+  return random;
+}
+console.log(randomNumber(1,10));
+
+function rollDice(){
+  return `You rolled: ${Math.floor(Math.random() * 6) + 1}`;
+}
+console.log(rollDice());
+
+function coinFlip(){
+  return Math.random() < 0.5 ? "Heads" : "Tails";
+}
+console.log(coinFlip());
+
