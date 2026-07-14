@@ -52,3 +52,5 @@ function zeroDivision(num1, num2){
   }
 }
 console.log(zeroDivision(10, 0));
+
+
