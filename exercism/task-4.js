@@ -1,27 +1,24 @@
 
-export function dayRate(ratePerHour) {
-  return ratePerHour * 8;
+export function frontDoorResponse(line) {
+  return line[0];
 }
 
-
-export function daysInBudget(budget, ratePerHour) {
-  
-  return Math.floor(budget / dayRate(ratePerHour));
+export function frontDoorPassword(word) {
+  let capital = word[0].toUpperCase();
+  let sliced = word.toLowerCase().slice(1);
+  return capital + sliced;
 }
 
-
-export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
-  let fullMonths = Math.floor(numDays / 22);
-  let remainingDays = numDays % 22;
-
-  let monthlyRate = dayRate(ratePerHour) * 22;
-
-  let discountedMonths = monthlyRate * fullMonths * (1 - discount);
-  let remainingCost = remainingDays * dayRate(ratePerHour);
-  return Math.ceil(discountedMonths + remainingCost);
-  
-  
+export function backDoorResponse(line) {
+  let trimmed = line.trim();
+  return trimmed[trimmed.length - 1];
 }
-dayRate(89);
-daysInBudget(20000, 89);
-priceWithMonthlyDiscount(89, 230, 0.42);
+
+export function backDoorPassword(word) {
+  let polite = frontDoorPassword(word) + ", please";
+  return polite;
+}
+frontDoorResponse('Stands so high');
+frontDoorPassword('Shire');
+backDoorResponse('Stands so high  ');
+backDoorPassword('horse');
