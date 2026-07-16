@@ -42,3 +42,5 @@ function calculateDiscount(price, percent) {
   return total;
 }
 console.log(calculateDiscount(400, 20));
+
+
