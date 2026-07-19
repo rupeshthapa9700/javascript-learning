@@ -25,3 +25,23 @@ function middleItem(lang){
   return lang[middle];
 }
 console.log(middleItem(["HTML","CSS","JavaScript"]));
+
+
+
+
+function arrSize(size){
+  if(size.length >= 7){
+    return "Large";
+  }
+  else if(size.length >= 4){
+    return "Medium";
+  }
+  else if(size.length >= 1){
+    return "Small";
+  }
+  else {
+    return "Empty";
+  }
+}
+
+console.log(arrSize([1, 2, 3, 4, 5, 6, 7]));
