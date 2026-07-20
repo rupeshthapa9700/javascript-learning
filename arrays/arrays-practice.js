@@ -45,3 +45,16 @@ function arrSize(size){
 }
 
 console.log(arrSize([1, 2, 3, 4, 5, 6, 7]));
+
+function replaceItem(item, oldItem, newItem){
+ let index = item.indexOf(oldItem);
+  if(index !== -1){
+    item[index] = newItem;
+  }
+  return item;
+}
+console.log(replaceItem(
+    ["HTML","CSS","JS"],
+    "CSS",
+    "Tailwind"
+));
