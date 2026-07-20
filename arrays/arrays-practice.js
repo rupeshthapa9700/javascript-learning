@@ -77,23 +77,13 @@ console.log(removeItem(
 ));
 
 
-
-function shoppingCart(item, added){
-
-  let included = item.includes(added);
-  
-  if(included){
-    console.log("Already in cart.");
-  }
-  else {
-    item.push(added);
-    console.log("Added to cart.");
-  }
-  return item;
-  
+function rotate(args){
+  args.push(args.shift());
+  return args
 }
-console.log(shoppingCart(
-["Milk","Bread","Eggs"],
-"Milk"
-));
+console.log(rotate(["A","B","C","D"]));
+
+
+
+
 
