@@ -97,16 +97,3 @@ console.log(shoppingCart(
 "Milk"
 ));
 
-function usernameGenerator(username){
-  return username.join('_').toLowerCase();
-}
-console.log(usernameGenerator([
-"Rupesh",
-"Thapa"
-]));
-
-
-function passwordGenerator(password){
-  return password.join('');
-}
-console.log(passwordGenerator(["Java","Script","2026"]));
