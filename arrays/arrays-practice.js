@@ -97,3 +97,9 @@ console.log(shoppingCart(
 "Milk"
 ));
 
+function reverse(args){
+  args.push(args.shift());
+  return args
+}
+console.log(reverse(["A","B","C","D"]));
+
