@@ -97,9 +97,10 @@ console.log(shoppingCart(
 "Milk"
 ));
 
-function reverse(args){
-  args.push(args.shift());
-  return args
+function usernameGenerator(username){
+  return username.join('_').toLowerCase();
 }
-console.log(reverse(["A","B","C","D"]));
-
+console.log(usernameGenerator([
+"Rupesh",
+"Thapa"
+]));
