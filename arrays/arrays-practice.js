@@ -58,3 +58,20 @@ console.log(replaceItem(
     "CSS",
     "Tailwind"
 ));
+
+
+
+
+function removeItem(item, remove){
+  let index = item.indexOf(remove);
+  if (index !== -1) {
+    item.splice(index, 1);
+  }
+
+  return item;
+  
+}
+console.log(removeItem(
+["Apple","Orange","Banana"],
+"Orange"
+));
