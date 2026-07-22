@@ -75,3 +75,25 @@ console.log(removeItem(
 ["Apple","Orange","Banana"],
 "Orange"
 ));
+
+
+
+function shoppingCart(item, added){
+
+  let included = item.includes(added);
+  
+  if(included){
+    console.log("Already in cart.");
+  }
+  else {
+    item.push(added);
+    console.log("Added to cart.");
+  }
+  return item;
+  
+}
+console.log(shoppingCart(
+["Milk","Bread","Eggs"],
+"Milk"
+));
+
