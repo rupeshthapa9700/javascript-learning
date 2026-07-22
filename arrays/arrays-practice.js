@@ -101,7 +101,13 @@ function rotate(args){
 }
 console.log(rotate(["A","B","C","D"]));
 
-
+function usernameGenerator(username){
+  return username.join('_').toLowerCase();
+}
+console.log(usernameGenerator([
+"Rupesh",
+"Thapa"
+]));
 
 
 
