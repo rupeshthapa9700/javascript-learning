@@ -114,4 +114,45 @@ function passwordGenerator(password){
 }
 console.log(passwordGenerator(["Java","Script","2026"]));
 
+let foods = ["bread", "milk"];
+
+function addFood(foods, food) {
+  foods.push(food);
+  console.log(`${food} added.`);
+  return foods;
+}
+
+function removeFood(foods, food) {
+  let index = foods.indexOf(food);
+
+  if (index === -1) {
+    console.log(`${food} not found.`);
+    return foods;
+  }
+
+  foods.splice(index, 1);
+  console.log(`${food} removed.`);
+  return foods;
+}
+
+function findFood(foods, food) {
+  return foods.includes(food);
+}
+
+function showFoods(foods) {
+  if (foods.length === 0) {
+    console.log("No foods available.");
+  } else {
+    console.log(`Foods: ${foods.join(", ")}`);
+  }
+}
+
+console.log(addFood(foods, "jam"));
+
+console.log(removeFood(foods, "milk"));
+
+console.log(findFood(foods, "jam"));
+
+showFoods(foods);
+
 
