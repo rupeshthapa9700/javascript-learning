@@ -109,5 +109,9 @@ console.log(usernameGenerator([
 "Thapa"
 ]));
 
+function passwordGenerator(password){
+  return password.join('');
+}
+console.log(passwordGenerator(["Java","Script","2026"]));
 
 
