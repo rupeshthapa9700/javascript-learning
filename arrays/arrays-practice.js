@@ -121,6 +121,7 @@ function addFood(foods, food) {
   console.log(`${food} added.`);
   return foods;
 }
+console.log(addFood(foods, "jam"));
 
 function removeFood(foods, food) {
   let index = foods.indexOf(food);
@@ -134,10 +135,13 @@ function removeFood(foods, food) {
   console.log(`${food} removed.`);
   return foods;
 }
+console.log(removeFood(foods, "milk"));
 
 function findFood(foods, food) {
   return foods.includes(food);
 }
+console.log(findFood(foods, "jam"));
+
 
 function showFoods(foods) {
   if (foods.length === 0) {
@@ -147,12 +151,56 @@ function showFoods(foods) {
   }
 }
 
-console.log(addFood(foods, "jam"));
 
-console.log(removeFood(foods, "milk"));
 
-console.log(findFood(foods, "jam"));
 
 showFoods(foods);
 
 
+
+let movies = ['avenger', 'superman', 'batman']
+function watchMovie(movies, movie){
+  if (movies.includes(movie)) {
+  console.log(`${movie} is already in the watchlist.`);
+  return movies;
+}
+
+  movies.push(movie);
+  console.log(`${movie} added.`)
+  return movies;
+}
+
+console.log(watchMovie(movies, 'hulk'));
+
+
+function removeMovie(movies, movie){
+  let index = movies.indexOf(movie);
+  
+  if(index === -1){
+    console.log(`${movie} not found.`);
+    return movies;
+  }
+  
+  movies.splice(index, 1);
+  console.log(`${movie} removed.`);
+  return movies;
+}
+console.log(removeMovie(movies, 'batman'));
+
+function isWatched(movies, movie){
+  return movies.includes(movie);
+}
+
+
+console.log(isWatched(movies, 'avenger'));
+
+function showMovies(movies){
+  if(movies.length === 0){
+    console.log(`No movies.`);
+  } else{
+    console.log(`Movies: ${movies.join(", ")}`);
+  }
+}
+
+
+showMovies(movies);
