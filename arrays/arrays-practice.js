@@ -204,3 +204,41 @@ function showMovies(movies){
 
 
 showMovies(movies);
+
+let songs = ['perfect', 'photograph', 'wildflower'];
+function addSong(songs, song){
+  if(songs.includes(song)){
+    console.log(`${song} is already on playlist.`);
+    return songs;
+  }
+  songs.push(song);
+  return songs;
+}
+console.log(addSong(songs, 'closer'));
+
+function removeSong(songs, song){
+  let index = songs.indexOf(song);
+  if(index === -1){
+    console.log(`${song} doesnot exist.`);
+    return songs;
+  }
+  songs.splice(index, 1);
+  console.log(`${song} has been removed.`);
+  return songs;
+}
+console.log(removeSong(songs, 'closer'));
+
+function randomSong(songs, song){
+  return songs[Math.floor(Math.random() * songs.length)];
+}
+console.log(randomSong(songs, 'closer'));
+
+function showPlaylist(songs){
+  if(songs.length === 0){
+    console.log("No songs on the list.");
+  }
+  else{
+    console.log(`Songs: ${songs.join(", ")}`);
+  }
+}
+showPlaylist(songs);
