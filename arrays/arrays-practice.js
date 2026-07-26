@@ -242,3 +242,39 @@ function showPlaylist(songs){
   }
 }
 showPlaylist(songs);
+
+
+let students = ["Ram", "Hari", "Sita", "Gita"];
+function markAbsent(students, student){
+  let index = students.indexOf(student);
+  if(index === -1){
+    console.log(`${student} is absent.`);
+    return students;
+  }
+  students.splice(index, 1);
+  console.log(`${student} marked as absent.`);
+  return students;
+  
+}
+console.log(markAbsent(students, "Ram"));
+
+function markPresent(students, student){
+  if(students.includes(student)){
+    console.log(`${student} is already marked as present.`);
+    return students;
+  }
+  students.push(student);
+  console.log(`${student} is marked as present.`);
+  return students;
+}
+console.log(markPresent(students, 'Ram'));
+
+function showAttendance(students){
+  if(students.length === 0){
+    console.log("No students.");
+  }
+  else {
+    console.log(`Students: ${students.join(", ")}`);
+  }
+}
+showAttendance(students);
