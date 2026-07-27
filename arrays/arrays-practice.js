@@ -278,3 +278,45 @@ function showAttendance(students){
   }
 }
 showAttendance(students);
+
+let people = ["Rupesh", "John", "Alex", "Sarah"];
+
+function addContact(people, person){
+  if(people.includes(person)){
+    console.log(`${person} already exists.`);
+    return people;
+  }
+  people.push(person);
+  console.log(`${person} added.`);
+  return people;
+}
+console.log(addContact(people, 'Hari'));
+function removeContact(people, person){
+  let index = people.indexOf(person);
+  if(index === -1){
+    console.log(`${person} doesnot exist.`);
+    return people;
+  }
+  people.splice(index, 1);
+  console.log(`${person} is removed.`);
+  return people;
+}
+console.log(removeContact(people, 'Hari'));
+function searchContact(people, person){
+  //i tried indexOf too and it gave me the position and to get the true or false i used includes.
+  return people.includes(person);
+}
+console.log(searchContact(people, 'Sarah'));
+function showContacts(people){
+  if(people.length === 0){
+    console.log("No contacts.");
+  }
+  else {
+    console.log(`Contacts: ${people.join(", ")}`);
+  }
+}
+showContacts(people);
+function randomContact(people){
+  return people[Math.floor(Math.random() * people.length)];
+}
+console.log(randomContact(people));
