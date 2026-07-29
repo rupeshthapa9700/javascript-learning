@@ -96,3 +96,35 @@ function randomCaptain(players){
   return players[Math.floor(Math.random() * players.length)];
 }
 console.log(randomCaptain(players));
+
+
+let ratings = [5, 4, 3, 5, 2];
+
+function addRating(ratings, rate){
+  ratings.push(rate);
+  return ratings;
+}
+console.log(addRating(ratings, 3));
+
+function removeLastRating(ratings){
+  ratings.pop();
+  return ratings;
+}
+console.log(removeLastRating(ratings));
+
+function highestRating(ratings){
+  return Math.max(...ratings);
+}
+console.log(highestRating(ratings));
+
+function averageRating(ratings){
+  let total =
+    ratings[0] +
+    ratings[1] +
+    ratings[2] +
+    ratings[3] +
+    ratings[4];
+
+  return total / ratings.length;
+}
+console.log(averageRating(ratings));
