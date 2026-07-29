@@ -49,3 +49,50 @@ function countBooks(books){
 }
 
 console.log(countBooks(books));
+
+
+let players = ["Messi", "Ronaldo", "Neymar"];
+function addPlayer(players, player){
+  if(players.includes(player)){
+    console.log(`${player} already exists.`);
+    return players;
+  }
+  players.push(player);
+  console.log(`${player} is added.`);
+  return players;
+}
+console.log(addPlayer(players, 'Ronaldo'));
+
+function removePlayer(players, player){
+  let index = players.indexOf(player);
+  if(index === -1){
+    console.log(`${player} does not exist.`);
+    return players;
+  }
+  players.splice(index, 1);
+  console.log(`${player} has been removed.`);
+  return players;
+}
+console.log(removePlayer(players, 'Ronaldo'));
+
+function hasPlayer(players, player){
+  return players.includes(player);
+}
+console.log(hasPlayer(players, 'Messi'));
+
+function showPlayers(players){
+  if(players.length === 0){
+    console.log("No players in the team.");
+  } else{
+    console.log(`Players: ${players.join(", ")}`);
+  }
+}
+showPlayers(players);
+
+function randomCaptain(players){
+  if(players.length === 0){
+    return "No players available.";
+  }
+  return players[Math.floor(Math.random() * players.length)];
+}
+console.log(randomCaptain(players));
