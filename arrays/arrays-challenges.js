@@ -128,3 +128,22 @@ function averageRating(ratings){
   return total / ratings.length;
 }
 console.log(averageRating(ratings));
+
+
+
+let dice = [1, 2, 3, 4, 5, 6]
+
+function playRound(dice){
+  let player1 = dice[Math.floor(Math.random() * dice.length)];
+  let player2 = dice[Math.floor(Math.random() * dice.length)];
+  if(player1 > player2){
+    return `Player 1 rolled ${player1} \n Player 2 rolled ${player2} \n Winner: Player 1`;
+  }
+  else if(player1 < player2){
+    return `Player 1 rolled ${player1} \n Player 2 rolled ${player2} \n Winner: Player 2`;
+  }
+  else {
+   return `Player 1 rolled ${player1} \n Player 2 rolled ${player2} \n Draw`;
+  }
+}
+console.log(playRound(dice));
