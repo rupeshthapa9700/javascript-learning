@@ -147,3 +147,23 @@ function playRound(dice){
   }
 }
 console.log(playRound(dice));
+
+let users = ['Rupesh_Thapa', 'Ram_Shrestha'];
+function registerUser(users, username) {
+  if (username.includes(" ")) {
+    return "Username should not contain spaces.";
+  }
+
+  if (username.length < 5) {
+    return "Username must be at least 5 characters long.";
+  }
+
+  if (users.includes(username)) {
+    return `${username} already exists.`;
+  }
+
+  users.push(username);
+  return users;
+}
+console.log(registerUser(users, 'Rupesh_Thapa'));
+
