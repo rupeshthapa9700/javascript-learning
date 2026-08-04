@@ -65,3 +65,31 @@ const showCar = (car) => {
 }
 console.log(showCar(car));
 
+const user = {
+  username: "rupesh",
+  password: "javascript123",
+  isLoggedIn: false
+};
+
+const login = (user, username, password) => {
+  if(user.username === username && user.password === password){
+    user.isLoggedIn = true;
+    return user;
+  }
+  else {
+    user.isLoggedIn = false;
+    return user;
+  }
+}
+console.log(login(user, 'rupesh', 'javascript123'));
+
+const logout = (user) => {
+   user.isLoggedIn = false;
+  return user;
+}
+console.log(logout(user));
+
+const showStatus = (user) => {
+  return user.isLoggedIn;
+}
+console.log(showStatus(user));
