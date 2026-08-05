@@ -186,3 +186,29 @@ const showMovie = (movie) => {
 }
 console.log(showMovie(movie));
 
+const account = {
+  owner: "Rupesh",
+  balance: 1000
+};
+
+const deposit = (account, amount) => {
+  account.balance += amount;
+  return account;
+}
+console.log(deposit(account, 1000));
+
+const withdraw = (account, amount) => {
+ if(account.balance < amount){
+   return "Insufficient Balance.";
+ }
+  else {
+    account.balance -= amount;
+    return account;
+  }
+}
+console.log(withdraw(account, 1000));
+
+const checkBalance = (account) => {
+  return account.balance;
+}
+console.log(checkBalance(account));
