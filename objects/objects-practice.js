@@ -124,3 +124,34 @@ const showLaptop = (laptop) => {
   return laptop;
 }
 console.log(showLaptop(laptop));
+
+
+const employee = {
+  name: "John",
+  salary: 45000,
+  department: "IT"
+};
+
+
+const increaseSalary = (employee, amount) => {
+  employee.salary += amount;
+  return employee;
+}
+console.log(increaseSalary(employee, 10000));
+
+const transferDepartment = (employee, department) => {
+  employee.department = department;
+  return employee;
+}
+console.log(transferDepartment(employee, 'Customer Care'));
+
+const removeDepartment = (employee) => {
+  delete employee.department;
+  return employee;
+}
+console.log(removeDepartment(employee));
+
+const employeeDetails = (employee) => {
+  return employee;
+}
+console.log(employeeDetails(employee));
