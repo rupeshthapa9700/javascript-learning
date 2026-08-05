@@ -212,3 +212,38 @@ const checkBalance = (account) => {
   return account.balance;
 }
 console.log(checkBalance(account));
+
+
+const product = {
+  name: "Keyboard",
+  price: 3500,
+  stock: 10
+};
+
+const buyProduct = (product, quantity) => {
+    if (quantity > product.stock) {
+        return "Not enough stock.";
+    }
+
+    product.stock -= quantity;
+    return product;
+  
+}
+console.log(buyProduct(product, 10));
+
+const restock = (product, quantity) => {
+  product.stock += quantity;
+  return product;
+}
+console.log(restock(product, 20));
+
+const updatePrice = (product, price) => {
+  product.price = price;
+  return product;
+}
+console.log(updatePrice(product, 4000));
+
+const productInfo = (product) => {
+  return product;
+}
+console.log(productInfo(product));
