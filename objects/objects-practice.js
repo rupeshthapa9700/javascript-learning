@@ -93,3 +93,34 @@ const showStatus = (user) => {
   return user.isLoggedIn;
 }
 console.log(showStatus(user));
+
+
+const laptop = {
+  brand: "Apple",
+  ram: "16GB",
+  storage: "512GB",
+  available: true
+};
+
+const sellLaptop = (laptop) => {
+  laptop.available = false;
+  return laptop;
+}
+console.log(sellLaptop(laptop));
+
+const restockLaptop = (laptop) => {
+  laptop.available = true;
+  return laptop;
+}
+console.log(restockLaptop(laptop));
+
+const updateStorage = (laptop, storage) => {
+  laptop.storage = storage;
+  return laptop;
+}
+console.log(updateStorage(laptop, '1TB'));
+
+const showLaptop = (laptop) => {
+  return laptop;
+}
+console.log(showLaptop(laptop));
