@@ -155,3 +155,34 @@ const employeeDetails = (employee) => {
   return employee;
 }
 console.log(employeeDetails(employee));
+
+
+const movie = {
+  title: "Inception",
+  rating: 9,
+  watched: false
+};
+
+const markWatched = (movie) => {
+  movie.watched = true;
+  return movie;
+}
+console.log(markWatched(movie));
+
+const updateRating = (movie, rating) => {
+  movie.rating = rating;
+  return movie;
+}
+console.log(updateRating(movie, 10));
+
+const removeRating = (movie) => {
+  delete movie.rating;
+  return movie;
+}
+console.log(removeRating(movie));
+
+const showMovie = (movie) => {
+  return movie;
+}
+console.log(showMovie(movie));
+
