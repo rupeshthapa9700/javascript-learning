@@ -247,3 +247,33 @@ const productInfo = (product) => {
   return product;
 }
 console.log(productInfo(product));
+
+const phoneBook = {
+  Rupesh: "9800000000",
+  John: "9811111111"
+};
+
+const addContact = (phoneBook, name, number) => {
+  phoneBook[name] = number;
+  return phoneBook;
+}
+console.log(addContact(phoneBook, "Ram", "9833333333"));
+
+const removeContact = (phoneBook, name) => {
+  delete phoneBook[name];
+  return phoneBook;
+}
+console.log(removeContact(phoneBook, 'Ram'));
+const searchContact = (phoneBook, name) =>{
+  return phoneBook.hasOwnProperty(name);
+} 
+console.log(searchContact(phoneBook, 'Ram'));
+const updateNumber = (phoneBook, name, number) => {
+  phoneBook[name] = number;
+  return phoneBook;
+}
+console.log(updateNumber(phoneBook, 'Rupesh', '9700000000'));
+const showContacts = (phoneBook) => {
+  return phoneBook;
+}
+console.log(showContacts(phoneBook));
