@@ -277,3 +277,40 @@ const showContacts = (phoneBook) => {
   return phoneBook;
 }
 console.log(showContacts(phoneBook));
+
+
+const library = {
+  books: [
+    {
+      title: "Atomic Habits",
+      available: true
+    },
+    {
+      title: "Deep Work",
+      available: false
+    }
+  ]
+};
+
+const borrowBook = (library, title) => {
+  const book = library.books.find(book => book.title === title);
+  if(book){
+    book.available = false;
+  }
+  return library;
+}
+console.log(borrowBook(library, 'Atomic Habits'));
+
+const returnBook = (library, title) => {
+ const book = library.books.find(book => book.title === title);
+  if(book){
+    book.available = true;
+  }
+  return library;
+}
+console.log(returnBook(library, 'Deep Work'));
+
+const showBooks = (library) => {
+  return library;
+}
+console.log(showBooks(library));
