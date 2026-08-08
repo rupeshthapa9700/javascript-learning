@@ -314,3 +314,45 @@ const showBooks = (library) => {
   return library;
 }
 console.log(showBooks(library));
+
+
+const cart = {
+  owner: "Rupesh",
+  items: [
+    {
+      name: "Mouse",
+      price: 1200
+    },
+    {
+      name: "Keyboard",
+      price: 3500
+    }
+  ]
+};
+
+const addItem = (cart, name, price) => {
+  cart.items.push({name, price});
+  return cart;
+}
+console.log(addItem(cart, 'USB', 1000));
+
+const removeItem = (cart, name) => {
+  const index = cart.items.findIndex(item => item.name === name);
+  if(index === -1) {
+   return `${name} is not found.`;
+}
+  cart.items.splice(index, 1);
+  return cart;
+}
+console.log(removeItem(cart, 'USB'));
+
+const totalPrice = (cart) => {
+  return cart.items.reduce((total, item) => total + item.price, 0);
+};
+
+console.log(totalPrice(cart));
+
+const showCart = (cart) => {
+  return cart;
+}
+console.log(showCart(cart));
