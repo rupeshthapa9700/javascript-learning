@@ -356,3 +356,42 @@ const showCart = (cart) => {
   return cart;
 }
 console.log(showCart(cart));
+
+
+const match = {
+  team: "Nepal",
+  score: 0,
+  wickets: 0,
+  overs: 0
+};
+
+const addRuns = (match, runs) => {
+  match.score += runs;
+  return match;
+}
+console.log(addRuns(match, 100));
+
+const wicket = (match, wickets) => {
+  match.wickets += wickets;
+  return match;
+}
+console.log(wicket(match, 2));
+
+const nextOver = (match, overs) => {
+  match.overs += overs;
+  return match;
+}
+console.log(nextOver(match, 5));
+
+const resetMatch = (match) => {
+  match.score = 0; 
+  match.wickets = 0; 
+  match.overs = 0; 
+  return match;
+}
+console.log(resetMatch(match));
+
+const showScore = (match) => {
+  return match.score;
+}
+console.log(showScore(match));
