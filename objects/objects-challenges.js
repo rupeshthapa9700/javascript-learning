@@ -99,3 +99,20 @@ const updateCity = (user, city) => {
   return user;
 }
 console.log(updateCity(user, 'Pokhara'));
+
+
+const user1 = {
+  name: "Rupesh",
+  profile: {
+    city: "Kathmandu"
+  }
+};
+
+const user2 = {
+  name: "John"
+};
+
+const getPhone = (user) => user?.profile?.contact?.phone;
+
+console.log(getPhone(user1));
+console.log(getPhone(user2));
