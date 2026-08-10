@@ -30,4 +30,23 @@ const hasCourse = (student) => {
 console.log(hasCourse(student));
 
 
+const user = {
+  username: "rupesh",
+  email: "rupesh@example.com",
+  age: 22
+};
 
+const getProperty = (user, property) => {
+  return user[property];
+}
+console.log(getProperty(user, 'username'));
+const updateProperty = (user, property, value) => {
+  user[property] = value;
+  return user;
+}
+console.log(updateProperty(user, 'age', 25));
+const removeProperty = (user, property) => {
+  delete user[property];
+  return user;
+}
+console.log(removeProperty(user, 'email'));
