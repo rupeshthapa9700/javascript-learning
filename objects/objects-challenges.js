@@ -70,4 +70,32 @@ console.log(getUserInfo(user1));
 console.log(getUserInfo(user2));
 
 
+const user = {
+  name: "Rupesh",
+  profile: {
+    city: "Kathmandu",
+    country: "Nepal",
+    contact: {
+      email: "rupesh@example.com",
+      phone: "9800000000"
+    }
+  }
+};
 
+const getCity = (user) => {
+  return user.profile.city;
+}
+console.log(getCity(user));
+const getEmail = (user) => {
+  return user.profile.contact.email;
+}
+console.log(getEmail(user));
+const getPhone = (user) => {
+  return user.profile.contact.phone;
+}
+console.log(getPhone(user));
+const updateCity = (user, city) => {
+   user.profile.city = city;
+  return user;
+}
+console.log(updateCity(user, 'Pokhara'));
