@@ -50,3 +50,24 @@ const removeProperty = (user, property) => {
   return user;
 }
 console.log(removeProperty(user, 'email'));
+
+
+
+const user1 = {
+  name: "Rupesh",
+  age: 22
+};
+
+const user2 = {
+  name: "John"
+};
+
+const getUserInfo = (user) => {
+   const {name, age = 18} = user;
+  return `${name} is ${age} years old.`;
+}
+console.log(getUserInfo(user1));
+console.log(getUserInfo(user2));
+
+
+
