@@ -134,3 +134,44 @@ const loadProduct = (data) => {
   return JSON.parse(data);
 }
 console.log(loadProduct(data));
+
+const students = [
+  {
+    name: "Rupesh",
+    age: 22,
+    course: "Computing"
+  },
+  {
+    name: "Ram",
+    age: 21,
+    course: "Business"
+  },
+  {
+    name: "Sita",
+    age: 23,
+    course: "Computing"
+  }
+];
+const findStudent = (students, name) => {
+  return students.find(student => student.name === name)
+}
+console.log(findStudent(students, "Sita"));
+
+const getStudentCourse = (students, name) => {
+  const student = students.find(student => student.name === name);
+  return student?.course;
+}
+console.log(getStudentCourse(students, "Ram"));
+
+const updateStudentAge = (students, name, age) => {
+  const student = students.find(student => student.name === name);
+
+  if (student) {
+    student.age = age;
+    console.log(`${name}'s age becomes ${age}.`);
+  }
+
+  return students;
+};
+
+console.log(updateStudentAge(students, "Rupesh", 23));
