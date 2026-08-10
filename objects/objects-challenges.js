@@ -116,3 +116,21 @@ const getPhone = (user) => user?.profile?.contact?.phone;
 
 console.log(getPhone(user1));
 console.log(getPhone(user2));
+
+
+const product = {
+  name: "MacBook",
+  price: 180000,
+  stock: 5
+};
+const saveProduct = (product) => {
+  return JSON.stringify(product);
+}
+console.log(saveProduct(product));
+const data = saveProduct(product);
+console.log(data);
+
+const loadProduct = (data) => {
+  return JSON.parse(data);
+}
+console.log(loadProduct(data));
