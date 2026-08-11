@@ -175,3 +175,44 @@ const updateStudentAge = (students, name, age) => {
 };
 
 console.log(updateStudentAge(students, "Rupesh", 23));
+
+
+
+const cart = {
+  owner: "Rupesh",
+  items: [
+    {
+      name: "Mouse",
+      price: 1200,
+      quantity: 2
+    },
+    {
+      name: "Keyboard",
+      price: 3500,
+      quantity: 1
+    }
+  ]
+};
+
+const addToCart = (cart, name, price, quantity) => {
+  cart.items.push({name, price, quantity});
+  return cart;
+}
+console.log(addToCart(cart, 'Headphone', 1000, 1));
+const removeFromCart = (cart, name) => {
+   const index = cart.items.findIndex(item => item.name === name);
+  if (index !== -1) {
+    cart.items.splice(index, 1);
+  }
+  return cart;
+}
+console.log(removeFromCart(cart, 'Headphone'));
+const findItem = (cart, name) => {
+  return cart.items.find(item => item.name === name);
+}
+console.log(findItem(cart, 'Keyboard'));
+const calculateTotal = (cart) => {
+    return cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+}
+console.log(calculateTotal(cart));
