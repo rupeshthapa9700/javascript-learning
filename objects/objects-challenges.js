@@ -216,3 +216,39 @@ const calculateTotal = (cart) => {
 
 }
 console.log(calculateTotal(cart));
+
+const bank = {
+  name: "Rupesh",
+  account: {
+    type: "Savings",
+    balance: 5000
+  }
+};
+
+const deposit = (bank, amount) => {
+  bank.account.balance += amount;
+  return bank;
+}
+console.log(deposit(bank, 2000));
+const withdraw = (bank, amount) => {
+  if(amount > bank.account.balance){
+    return "Insufficient Balance.";
+  }
+  bank.account.balance -= amount;
+  return bank;
+}
+console.log(withdraw(bank, 2000));
+const getBalance = (bank) => {
+  return bank.account.balance;
+}
+console.log(getBalance(bank));
+const changeAccountType = (bank, type) => {
+  bank.account.type = type;
+  return bank;
+}
+console.log(changeAccountType(bank, 'FD'));
+const deleteAccountType = (bank) => {
+  delete bank.account.type;
+  return bank;
+}
+console.log(deleteAccountType(bank));
